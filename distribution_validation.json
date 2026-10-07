@@ -1,0 +1,10 @@
+{
+  "release": "0.2.0",
+  "date": "2026-10-05",
+  "wheel_built_offline": true,
+  "installed_without_dependencies_into_isolated_target": true,
+  "tests_run_with_python_isolated_mode": true,
+  "tests_passed": 9,
+  "original_project_imports_required": false,
+  "note": "TensorFlow/Keras/NumPy supplied by the existing pinned interpreter environment"
+}

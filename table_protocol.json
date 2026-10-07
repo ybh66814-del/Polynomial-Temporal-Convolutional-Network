@@ -1,0 +1,41 @@
+{
+  "scope": "Metadata from the supplied table; no training is implemented or claimed",
+  "input_shape": [
+    256,
+    1
+  ],
+  "dtype": "float32",
+  "num_classes": 7,
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "loss": "categorical_crossentropy",
+  "batch_size": 32,
+  "epochs": 1,
+  "models": [
+    "tcn",
+    "cnn",
+    "dcms",
+    "rmff",
+    "lstm",
+    "v_bilstm",
+    "roat"
+  ],
+  "v_bilstm_actual_architecture": "Historical DK-KCFP-BiLSTM: median filter, wavelet polynomial expansion, KCFP, self-attention, LayerNorm, BiLSTM",
+  "rmff_stage_module_counts": [
+    2,
+    3,
+    2
+  ],
+  "rmff_resolution": "User confirmed preservation of the historical 3-stage, 7-module implementation",
+  "v_bilstm_configuration": {
+    "median_window": 5,
+    "filters": 32,
+    "attention_heads": 4,
+    "attention_key_dim": 8,
+    "layer_norm_epsilon": 0.001,
+    "lstm_units_per_direction": 150,
+    "merge_mode": "concat",
+    "return_sequences": false,
+    "dropout": 0.5
+  }
+}

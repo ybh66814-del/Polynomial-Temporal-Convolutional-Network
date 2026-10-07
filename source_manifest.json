@@ -1,0 +1,135 @@
+{
+  "release": "0.2.0",
+  "date": "2026-10-05",
+  "sources": {
+    "baseline": {
+      "project_relative_path": "src/baselines/__init__.py",
+      "sha256": "432fbb1cd995c7a0e7445509bbb8bec5a38bc20de43f6419fd2d351c2e690ae9"
+    },
+    "dk": {
+      "project_relative_path": "archive/source_backups/dk_kcfp_bilstm_backup_20260630_100747.py",
+      "sha256": "6e64862d0421c10dd42444c78354498ac6ac9b8343a135df9502c9b48e1c9047"
+    }
+  },
+  "modules": {
+    "tcn": {
+      "source": "baseline",
+      "definitions": [
+        {
+          "name": "_tcn_residual_block",
+          "source_line": 63,
+          "ast_sha256": "b0fc067563e0e3a434692121699487d726d4516f834832cb39a4f5c5d760c5c9",
+          "source_sha256": "38c3fa0812f73023b37086cf57d2e39695f4fa38d88fbd2a353f98ee672dc399"
+        },
+        {
+          "name": "build_cnn_tcn",
+          "source_line": 86,
+          "ast_sha256": "0503b3838393c3e36ded823e2051fea2db846242a7fca0d261b05819f9a01a3b",
+          "source_sha256": "7fa01c70e0a53c7b068cacd46814799b5f62ff95c1488a5fed367225c9840fb7"
+        }
+      ]
+    },
+    "cnn": {
+      "source": "baseline",
+      "definitions": [
+        {
+          "name": "build_classic_cnn",
+          "source_line": 216,
+          "ast_sha256": "c1a3ee34ffe6a90b92a7b08468972e5b292a28b80e88f6503b5a065f7d9e3a71",
+          "source_sha256": "406bd3f3b522fb43579a6115c9943231d86c59fdb66fad214bf9a73da4af6779"
+        }
+      ]
+    },
+    "dcms": {
+      "source": "baseline",
+      "definitions": [
+        {
+          "name": "_ms_block",
+          "source_line": 130,
+          "ast_sha256": "bdbbb479097dd11715beba9341fc2a3262b55ad9673d7dfd60316d3b638081c9",
+          "source_sha256": "805c98d8e86caf310cf30f47f3bd448757505060ecfb29121dae3dcea6789430"
+        },
+        {
+          "name": "build_dcms1dcnn",
+          "source_line": 151,
+          "ast_sha256": "267801a4ecbc5cd5579a58750fe4d68ef99792e8cb2801c0ac7709163c102957",
+          "source_sha256": "4472377d814136dc3856beecd6e2a486887b2c6caa4c8e7226908a9a236eac06"
+        }
+      ]
+    },
+    "rmff": {
+      "source": "baseline",
+      "definitions": [
+        {
+          "name": "_rmff_module_1d",
+          "source_line": 293,
+          "ast_sha256": "3c5b82efeee631049cc864ca5d062a2e4914a22cb6fee95025d5dbd49d26a6ef",
+          "source_sha256": "6813d467d88e9776bd630e70565cd5d44bc5cbc42275d8262351c5293ea92b1b"
+        },
+        {
+          "name": "build_rmffcnn",
+          "source_line": 337,
+          "ast_sha256": "e10452bdd14ee70433d0a659e6b1ee44c01323880379e9aa1d7e553515a0fea4",
+          "source_sha256": "5fb174b6cb1f38d94bd60262cc17d436632c1444b5fcfef9098f8903c4b11b77"
+        }
+      ]
+    },
+    "lstm": {
+      "source": "baseline",
+      "definitions": [
+        {
+          "name": "build_lstm_wang",
+          "source_line": 195,
+          "ast_sha256": "b0c4af478672a26c85ff50d024c9c7d6430a915c10ea7664769b68a7e907be5b",
+          "source_sha256": "949754a940c90f602663e94e2677b643df1130a676287281fa7e0a4f15ad65b5"
+        }
+      ]
+    },
+    "roat": {
+      "source": "baseline",
+      "definitions": [
+        {
+          "name": "ROATEnvelopeSpectrum",
+          "source_line": 23,
+          "ast_sha256": "115dddb3ccc425578806b91c3b66fe28ecad0e1954f30f5317cb6446a179f720",
+          "source_sha256": "cd70e70fa6b28e9ab516245d4570ace7b0696450509cff5040c94931b166ff4c"
+        },
+        {
+          "name": "build_roat_spectrum_cnn",
+          "source_line": 375,
+          "ast_sha256": "6ab2246b89f1f5e29ac63a038c2231cf3b78c033f3cd6ded3c4ee5bfb337d2c9",
+          "source_sha256": "ec1b64e6b7ddf420aa473020915754e0579180a0d89032178b1bfa27508a1a00"
+        }
+      ]
+    },
+    "v_bilstm": {
+      "source": "dk",
+      "definitions": [
+        {
+          "name": "AdaptiveMedianFilter1D",
+          "source_line": 14,
+          "source_sha256": "845d3adc20487815eb5ae80d58677e6a85f2b855892f4b2eb449f7f6054cc5fc",
+          "ast_sha256": "72a583695a1b6d6fc468305c266abcbb987651de7be5f57a012831dafdfdd3fb"
+        },
+        {
+          "name": "WaveletVolterraExpansion",
+          "source_line": 48,
+          "source_sha256": "5fda93a9e42ae35560d73695f0a7478f383c4a1d4e5cc0bcf25251a9c691952e",
+          "ast_sha256": "a48f31b047a7a9d304800da00b4d1d650d2dd69ba69eb78e1a4a70dd074e61e2"
+        },
+        {
+          "name": "KroneckerFeaturePyramid",
+          "source_line": 100,
+          "source_sha256": "2ca9e78b5fd4a44b9b2a308e39ee2ef356b7b8294fb531d1cf95e2ffd188bee1",
+          "ast_sha256": "4137d52784aefbfa547ea7c5dd8f0ea623bd13bb1c51219611c0d2d09e08f2af"
+        },
+        {
+          "name": "build_dk_kcfp_bilstm",
+          "source_line": 156,
+          "source_sha256": "8ac544ea6197b626f4182f09e9a1ce3fa7caaebe21100c93ab5cb95d0a68e498",
+          "ast_sha256": "0d1d54bef2055a53a85e9ebc1eaa4605102d657f5648d2417c52a25e90cd5354"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "release_version": "0.2.0",
+  "date": "2026-10-05",
+  "tensorflow": "2.13.0",
+  "scope": "architecture and checkpoint parity, no training",
+  "models": [
+    {
+      "model": "tcn",
+      "total_params": 165111,
+      "trainable_params": 163607,
+      "non_trainable_params": 1504,
+      "source_layer_configs_equal_ignoring_names": true,
+      "source_output_max_difference": 0.0
+    },
+    {
+      "model": "cnn",
+      "total_params": 43463,
+      "trainable_params": 43079,
+      "non_trainable_params": 384,
+      "source_layer_configs_equal_ignoring_names": true,
+      "source_output_max_difference": 0.0
+    },
+    {
+      "model": "dcms",
+      "total_params": 211079,
+      "trainable_params": 209511,
+      "non_trainable_params": 1568,
+      "source_layer_configs_equal_ignoring_names": true,
+      "source_output_max_difference": 0.0
+    },
+    {
+      "model": "rmff",
+      "total_params": 2690312,
+      "trainable_params": 2685082,
+      "non_trainable_params": 5230,
+      "source_layer_configs_equal_ignoring_names": true,
+      "source_output_max_difference": 0.0
+    },
+    {
+      "model": "lstm",
+      "total_params": 125703,
+      "trainable_params": 125447,
+      "non_trainable_params": 256,
+      "source_layer_configs_equal_ignoring_names": true,
+      "source_output_max_difference": 0.0
+    },
+    {
+      "model": "roat",
+      "total_params": 24011,
+      "trainable_params": 23689,
+      "non_trainable_params": 322,
+      "source_layer_configs_equal_ignoring_names": true,
+      "source_output_max_difference": 0.0
+    },
+    {
+      "model": "v_bilstm",
+      "total_params": 233227,
+      "trainable_params": 233163,
+      "non_trainable_params": 64,
+      "source_layer_configs_equal_ignoring_names": true,
+      "source_output_max_difference": 0.0
+    }
+  ],
+  "historical_checkpoint": {
+    "project_relative_path": "outputs_baselines/no_aug_single_epoch/dk_kcfp_bilstm/models/dk_kcfp_bilstm_no_aug_ep1_run1_final.keras",
+    "sha256": "7ba8736fb1d183887ee29563b9d2f6d8b70720456760ce90cefb7097976bd4b7",
+    "total_params": 233227,
+    "config_sha256": "63a9e2f5a67023fafd30a3e1fec793fb3f5e035c0372539468f3c82b42d7f0ee",
+    "configs_equal_ignoring_layer_names": true,
+    "weight_shapes_equal": true,
+    "probe_count": 5,
+    "max_output_difference_after_transferring_checkpoint_weights": 0.0,
+    "layers": [
+      {
+        "name": "signal",
+        "class": "InputLayer",
+        "params": 0,
+        "output_shape": [
+          [
+            null,
+            256,
+            1
+          ]
+        ]
+      },
+      {
+        "name": "adaptive_median_filter",
+        "class": "AdaptiveMedianFilter1D",
+        "params": 0,
+        "output_shape": [
+          null,
+          256,
+          1
+        ]
+      },
+      {
+        "name": "wavelet_volterra_expansion",
+        "class": "WaveletVolterraExpansion",
+        "params": 0,
+        "output_shape": [
+          null,
+          256,
+          21
+        ]
+      },
+      {
+        "name": "kcfp",
+        "class": "KroneckerFeaturePyramid",
+        "params": 7232,
+        "output_shape": [
+          null,
+          256,
+          32
+        ]
+      },
+      {
+        "name": "self_attention",
+        "class": "MultiHeadAttention",
+        "params": 4224,
+        "output_shape": [
+          null,
+          256,
+          32
+        ]
+      },
+      {
+        "name": "attention_norm",
+        "class": "LayerNormalization",
+        "params": 64,
+        "output_shape": [
+          null,
+          256,
+          32
+        ]
+      },
+      {
+        "name": "bilstm",
+        "class": "Bidirectional",
+        "params": 219600,
+        "output_shape": [
+          null,
+          300
+        ]
+      },
+      {
+        "name": "dropout",
+        "class": "Dropout",
+        "params": 0,
+        "output_shape": [
+          null,
+          300
+        ]
+      },
+      {
+        "name": "classifier",
+        "class": "Dense",
+        "params": 2107,
+        "output_shape": [
+          null,
+          7
+        ]
+      }
+    ],
+    "training_metadata": {
+      "optimizer": "Adam",
+      "learning_rate": 0.001,
+      "loss": "categorical_crossentropy",
+      "batch_size": 32,
+      "epochs": 1
+    },
+    "checkpoint_included_in_release": false
+  },
+  "old_release_and_zip_unchanged": true,
+  "six_other_modules_byte_identical": true,
+  "historical_source_and_checkpoint_unchanged": true
+}
